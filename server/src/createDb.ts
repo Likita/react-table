@@ -1,7 +1,7 @@
 import { AppDataSource } from './data-source';
 import { INewUser, Role, Status, Team, User } from './entity/User';
 
-function fillMockData() {
+function seedMockData() {
     let userArr = [];
     let mockData:INewUser[] = [
         {
@@ -63,5 +63,5 @@ function fillMockData() {
 }
 
 AppDataSource.initialize().then(async () => {
-    await AppDataSource.manager.save(fillMockData())
+    await AppDataSource.manager.save(seedMockData())
 }).catch(error => console.log(error))

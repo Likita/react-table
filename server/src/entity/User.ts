@@ -1,18 +1,5 @@
 import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm'
 
-export interface INewUser {
-  userName: string;
-  email: string;
-  role: Role;
-  status: Status;
-  team: Team;
-}
-
-export interface IUser extends INewUser {
-  id: string;
-  speaker?: boolean
-}
-
 export enum Role {
   FULLSTACK = 'Fullstack',
   FRONTEND = 'Frontend',
@@ -29,6 +16,19 @@ export enum Team {
   A = 'Team A',
   B = 'Team B',
   C = 'Team C',
+}
+
+export interface INewUser {
+  userName: string;
+  email: string;
+  role: Role;
+  status: Status;
+  team: Team;
+}
+
+export interface IUser extends INewUser {
+  id: string;
+  speaker?: boolean
 }
 
 @Entity()
