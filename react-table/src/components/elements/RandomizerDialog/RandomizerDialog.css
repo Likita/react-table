@@ -1,0 +1,18 @@
+.user-list {
+  line-height: 2.5;
+  padding-left: 15px;
+}
+
+.p {
+  margin: 0;
+}
+
+.speaker {
+  color: #cccccc;
+}
+
+.wrapper {
+  width: 100%;
+  padding: 0 25px 10px;
+  box-sizing: border-box;
+}
